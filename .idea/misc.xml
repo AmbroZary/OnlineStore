@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ClientBoundedContext/pom.xml" />
+        <option value="$PROJECT_DIR$/ClientBoundedContext/Application/pom.xml" />
+        <option value="$PROJECT_DIR$/ClientBoundedContext/Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/ClientBoundedContext/Infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/FinancesBoundedContext/pom.xml" />
+        <option value="$PROJECT_DIR$/FinancesBoundedContext/Application/pom.xml" />
+        <option value="$PROJECT_DIR$/FinancesBoundedContext/Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/FinancesBoundedContext/Infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/LogisticBoundedBontext/pom.xml" />
+        <option value="$PROJECT_DIR$/WarehouseBoundedContext/pom.xml" />
+        <option value="$PROJECT_DIR$/LogisticBoundedBontext/Application/pom.xml" />
+        <option value="$PROJECT_DIR$/WarehouseBoundedContext/Application/pom.xml" />
+        <option value="$PROJECT_DIR$/WarehouseBoundedContext/Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/WarehouseBoundedContext/Infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/Common/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/../SkompilowanyProjekt" />
+  </component>
+</project>

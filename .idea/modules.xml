@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Projekt.iml" filepath="$PROJECT_DIR$/.idea/Projekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClientBoundedContext/client-bounded-context.iml" filepath="$PROJECT_DIR$/ClientBoundedContext/client-bounded-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClientBoundedContext/Application/client-bounded-context-application.iml" filepath="$PROJECT_DIR$/ClientBoundedContext/Application/client-bounded-context-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClientBoundedContext/Domain/client-bounded-context-domain.iml" filepath="$PROJECT_DIR$/ClientBoundedContext/Domain/client-bounded-context-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClientBoundedContext/Infrastructure/client-bounded-context-infrastructure.iml" filepath="$PROJECT_DIR$/ClientBoundedContext/Infrastructure/client-bounded-context-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Common/common.iml" filepath="$PROJECT_DIR$/Common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinancesBoundedContext/finances-bounded-context.iml" filepath="$PROJECT_DIR$/FinancesBoundedContext/finances-bounded-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinancesBoundedContext/Application/finances-bounded-context-application.iml" filepath="$PROJECT_DIR$/FinancesBoundedContext/Application/finances-bounded-context-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinancesBoundedContext/Domain/finances-bounded-context-domain.iml" filepath="$PROJECT_DIR$/FinancesBoundedContext/Domain/finances-bounded-context-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinancesBoundedContext/Infrastructure/finances-bounded-context-infrastructure.iml" filepath="$PROJECT_DIR$/FinancesBoundedContext/Infrastructure/finances-bounded-context-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogisticBoundedBontext/logistic-bounded-context.iml" filepath="$PROJECT_DIR$/LogisticBoundedBontext/logistic-bounded-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogisticBoundedBontext/Application/logistic-bounded-context-application.iml" filepath="$PROJECT_DIR$/LogisticBoundedBontext/Application/logistic-bounded-context-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogisticBoundedBontext/Domain/logistic-bounded-context-domain.iml" filepath="$PROJECT_DIR$/LogisticBoundedBontext/Domain/logistic-bounded-context-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogisticBoundedBontext/Infrastructure/logistic-bounded-context-infrastructure.iml" filepath="$PROJECT_DIR$/LogisticBoundedBontext/Infrastructure/logistic-bounded-context-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WarehouseBoundedContext/warehouse-bounded-context.iml" filepath="$PROJECT_DIR$/WarehouseBoundedContext/warehouse-bounded-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WarehouseBoundedContext/Application/warehouse-bounded-context-application.iml" filepath="$PROJECT_DIR$/WarehouseBoundedContext/Application/warehouse-bounded-context-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WarehouseBoundedContext/Domain/warehouse-bounded-context-domain.iml" filepath="$PROJECT_DIR$/WarehouseBoundedContext/Domain/warehouse-bounded-context-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WarehouseBoundedContext/Infrastructure/warehouse-bounded-context-infrastructure.iml" filepath="$PROJECT_DIR$/WarehouseBoundedContext/Infrastructure/warehouse-bounded-context-infrastructure.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client-bounded-context" />
+        <module name="client-bounded-context-application" />
+        <module name="client-bounded-context-domain" />
+        <module name="client-bounded-context-infrastructure" />
+        <module name="common" />
+        <module name="finances-bounded-context" />
+        <module name="finances-bounded-context-application" />
+        <module name="finances-bounded-context-domain" />
+        <module name="finances-bounded-context-infrastructure" />
+        <module name="logistic-bounded-context-application" />
+        <module name="logistic-bounded-context-domain" />
+        <module name="logistic-bounded-context-infrastructure" />
+        <module name="warehouse-bounded-context" />
+        <module name="warehouse-bounded-context-application" />
+        <module name="warehouse-bounded-context-domain" />
+        <module name="warehouse-bounded-context-infrastructure" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client-bounded-context" target="1.8" />
+      <module name="client-bounded-context-application" target="1.8" />
+      <module name="client-bounded-context-domain" target="1.8" />
+      <module name="client-bounded-context-infrastructure" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="finances-bounded-context" target="1.8" />
+      <module name="finances-bounded-context-application" target="1.8" />
+      <module name="finances-bounded-context-domain" target="1.8" />
+      <module name="finances-bounded-context-infrastructure" target="1.8" />
+      <module name="logistic-bounded-context" target="1.8" />
+      <module name="logistic-bounded-context-application" target="1.8" />
+      <module name="logistic-bounded-context-domain" target="1.8" />
+      <module name="logistic-bounded-context-infrastructure" target="1.8" />
+      <module name="warehouse-bounded-context" target="1.8" />
+      <module name="warehouse-bounded-context-application" target="1.8" />
+      <module name="warehouse-bounded-context-domain" target="1.8" />
+      <module name="warehouse-bounded-context-infrastructure" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
