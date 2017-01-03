@@ -24,13 +24,13 @@ public class ProductWarehouseRepository implements ProductRepository{
 
     @Override
     public void insert(Product element) {
-        ClientResponse response = webResource.path("/product/add")
+        webResource.path("/product/add")
                 .post(ClientResponse.class, element);
     }
 
     @Override
     public void delete(int id) {
-        ClientResponse response = webResource.path("/product/delete")
+        webResource.path("/product/delete")
                 .post(ClientResponse.class, id);
     }
 

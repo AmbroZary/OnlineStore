@@ -24,8 +24,8 @@ public class FinanceStateManagerRestAPI {
             financeStateManager.changeOrderStateToPaid(id);
         }
         catch (NullPointerException e){
-            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_MODIFIED);
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_MODIFIED);
         }
-        return new ResponseEntity<String>("Zamówienie zostało opłacone", HttpStatus.OK);
+        return new ResponseEntity<>("Zamówienie zostało opłacone", HttpStatus.OK);
     }
 }
