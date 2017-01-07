@@ -15,6 +15,14 @@ public class Transaction extends Entity{
         this.transactionDate = transactionDate;
     }
 
+    public Transaction(Order order, Date transactionDate) {
+        this.order = order;
+        this.transactionDate = transactionDate;
+    }
+
+    public Transaction() {
+    }
+
     public Order getOrder() {
         return order;
     }

@@ -1,25 +1,28 @@
 package client.domain.Aggregates.UserAggregate;
 
-import client.domain.Aggregates.ProductAggregate.Product;
+
+import warehouse.domain.ProductAggregate.Product;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Cart {
-    private ArrayList<Product> products;
+    private Set<Product> products;
 
     public Cart() {
-        products = new ArrayList<>();
+        products = new HashSet<>();
     }
 
-    public Cart(ArrayList<Product> products) {
+    public Cart(Set<Product> products) {
         this.products = products;
     }
 
-    public ArrayList<Product> getProducts() {
+    public Set<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(ArrayList<Product> products) {
+    public void setProducts(Set<Product> products) {
         this.products = products;
     }
 

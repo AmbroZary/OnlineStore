@@ -1,6 +1,6 @@
 package client.app.Services.StateManagersImpl;
 
-import client.domain.Aggregates.OrderAggregate.OrderStates.PaidOrderState;
+import client.domain.Aggregates.OrderAggregate.OrderState;
 import client.domain.Aggregates.OrderAggregate.Repository.OrderRepository;
 import client.app.Services.Interfaces.StateManagers.FinanceStateManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,6 @@ public class FinanceStateManagerImpl extends StateManagerImpl implements Finance
 
     @Override
     public void changeOrderStateToPaid(int id)  throws NullPointerException{
-        changeOrderState(id, new PaidOrderState());
+        changeOrderState(id, OrderState.Paid);
     }
 }

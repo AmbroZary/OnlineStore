@@ -29,6 +29,11 @@
             <artifactId>warehouse-bounded-context-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>warehouse-bounded-context-infrastructure</groupId>
+            <artifactId>warehouse-bounded-context-infrastructure</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <properties>

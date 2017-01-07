@@ -5,12 +5,15 @@ import common.Interfaces.Entity;
 public class Order extends Entity{
 
     private Address address;
-    private boolean provided;
+    private Boolean provided;
 
     public Order(int id, Address address) {
         super(id);
         this.address = address;
         this.provided = false;
+    }
+
+    public Order() {
     }
 
     public Address getAddress() {
@@ -22,11 +25,11 @@ public class Order extends Entity{
         this.address = address;
     }
 
-    public boolean isProvided() {
+    public Boolean getProvided() {
         return provided;
     }
 
-    public void setProvided(boolean provided) {
+    public void setProvided(Boolean provided) {
         this.provided = provided;
     }
 }

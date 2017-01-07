@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
-            <groupId>client-bounded-context-domain</groupId>
-            <artifactId>client-bounded-context-domain</artifactId>
+            <groupId>common</groupId>
+            <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

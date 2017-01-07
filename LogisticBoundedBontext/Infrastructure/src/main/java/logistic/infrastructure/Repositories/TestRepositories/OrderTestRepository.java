@@ -5,7 +5,7 @@ import logistic.domain.OrderAggregate.Order;
 import logistic.domain.OrderAggregate.Repository.OrderRepository;
 import org.springframework.stereotype.Component;
 
-@Component
+// @Component
 public class OrderTestRepository extends CommonTestRepository<Order> implements OrderRepository {
 
     @Override

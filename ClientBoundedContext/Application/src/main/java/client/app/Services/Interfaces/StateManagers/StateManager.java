@@ -1,6 +1,6 @@
 package client.app.Services.Interfaces.StateManagers;
 
-import client.domain.Aggregates.OrderAggregate.OrderStates.OrderState;
+import client.domain.Aggregates.OrderAggregate.OrderState;
 
 public interface StateManager {
     void changeOrderState(int id, OrderState state);

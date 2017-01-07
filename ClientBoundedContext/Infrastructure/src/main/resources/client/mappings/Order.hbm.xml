@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="client.domain.Aggregates.OrderAggregate.Order" table="Orders">
+        <id name="id" type="int">
+            <column name="orderId" precision="10" scale="0" not-null="true" />
+            <generator class="sequence" />
+        </id>
+        <component name="address" class="client.domain.Aggregates.OrderAggregate.OrderAddress"> <!-- class attribute optional -->
+            <property name="email"/>
+            <property name="name"/>
+            <property name="lastName"/>
+            <property name="street"/>
+            <property name="houseNumber"/>
+            <property name="flatNumber"/>
+            <property name="city"/>
+            <property name="postalCode"/>
+            <property name="phoneNumber"/>
+        </component>
+        <one-to-one name="owner" class="client.domain.Aggregates.UserAggregate.User"
+                    cascade="save-update"/>
+        <property name="state" >
+            <column name="state" sql-type="number" precision="10" scale="0" not-null="true"/>
+            <type name="common.HibernateNumericEnum">
+                <param name="enumClass">client.domain.Aggregates.OrderAggregate.OrderState</param>
+            </type>
+        </property>
+        <property name="shippingMethod" >
+            <column name="shippingMethod" sql-type="number" precision="10" scale="0" not-null="true"/>
+            <type name="common.HibernateNumericEnum">
+                <param name="enumClass">client.domain.Aggregates.OrderAggregate.ShippingMethod</param>
+            </type>
+        </property>
+        <property name="paymentMethod" >
+            <column name="paymentMethod" sql-type="number" precision="10" scale="0" not-null="true"/>
+            <type name="common.HibernateNumericEnum">
+                <param name="enumClass">client.domain.Aggregates.OrderAggregate.PaymentMethod</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

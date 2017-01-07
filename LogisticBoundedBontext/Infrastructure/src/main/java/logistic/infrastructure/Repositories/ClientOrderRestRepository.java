@@ -1,19 +1,17 @@
 package logistic.infrastructure.Repositories;
 
 import client.domain.Aggregates.OrderAggregate.Order;
-import client.domain.Aggregates.OrderAggregate.OrderStates.OrderState;
-import client.domain.Aggregates.OrderAggregate.OrderStates.PaidOrderState;
-import client.domain.Aggregates.OrderAggregate.OrderStates.ProvidedOrderState;
-import client.domain.Aggregates.OrderAggregate.OrderStates.SentOrderState;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
 import logistic.domain.Services.ClientOrderRepository;
+import org.springframework.stereotype.Component;
 
 import javax.ws.rs.core.MultivaluedMap;
 
+@Component
 public class ClientOrderRestRepository implements ClientOrderRepository{
     private WebResource webResource;
 

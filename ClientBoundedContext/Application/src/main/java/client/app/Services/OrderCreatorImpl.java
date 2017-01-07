@@ -1,7 +1,7 @@
 package client.app.Services;
 
-import client.domain.Aggregates.OrderAggregate.Repository.OrderRepository;
-import client.domain.Aggregates.ProductAggregate.Repository.ProductRepository;
+import warehouse.domain.ProductAggregate.Repository.MissingProductException;
+import warehouse.domain.ProductAggregate.Repository.ProductRepository;
 import client.domain.Aggregates.UserAggregate.Cart;
 import client.domain.Aggregates.UserAggregate.Client;
 import client.domain.Aggregates.OrderAggregate.Factory.OrderFactory;
@@ -29,7 +29,7 @@ public class OrderCreatorImpl implements OrderCreator{
     @Override
     public Order createOrder(Client client, Cart cart, String name, String lastName, String street, String houseNumber,
                              String flatNumber, String city, String postalCode, String phoneNumber, String email, ShippingMethod shippingMethod,
-                             PaymentMethod paymentMethod) {
+                             PaymentMethod paymentMethod) throws MissingProductException{
         Order order = orderFactory.createOrder(client,cart,name,lastName,street,houseNumber,flatNumber,city,postalCode,phoneNumber,email,
                 shippingMethod,paymentMethod);
         emailSender.sendEmail(email, String.format("Zamowienie numer %1$s zostało złożone", order.getId()), "Twoje zamówienie zostało złożone. Czekaj na dalsze informacje");

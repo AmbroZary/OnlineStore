@@ -1,14 +1,18 @@
 package client.infrastructure.Repositories;
 
-import client.domain.Aggregates.ProductAggregate.Model;
-import client.domain.Aggregates.ProductAggregate.Product;
-import client.domain.Aggregates.ProductAggregate.Repository.ProductRepository;
-import client.domain.Aggregates.ProductAggregate.Size;
+
+
+import warehouse.domain.ProductAggregate.Model;
+import warehouse.domain.ProductAggregate.Product;
+import warehouse.domain.ProductAggregate.Repository.MissingProductException;
+import warehouse.domain.ProductAggregate.Repository.ProductRepository;
+
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
+import warehouse.domain.ProductAggregate.Size;
 
 import javax.ws.rs.core.MultivaluedMap;
 import java.util.List;
@@ -71,5 +75,15 @@ public class ProductWarehouseRepository implements ProductRepository{
                 .get(ClientResponse.class);
 
         return response.getEntity(Product.class);
+    }
+
+    @Override
+    public void orderProducts(int OrderId, List<Product> products) throws MissingProductException {
+
+    }
+
+    @Override
+    public List<Product> findForOrder(int OrderId) {
+        return null;
     }
 }

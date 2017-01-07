@@ -1,8 +1,9 @@
 package client.domain.Aggregates.UserAggregate.Repository;
 
-import client.domain.Aggregates.ProductAggregate.Product;
+
 import client.domain.Aggregates.UserAggregate.User;
 import common.Repositories.CommonRepository;
+import warehouse.domain.ProductAggregate.Product;
 
 import java.util.List;
 

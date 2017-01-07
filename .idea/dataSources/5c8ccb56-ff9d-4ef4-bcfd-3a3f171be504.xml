@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="client">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="CLIENT">
+      <ObjectId>50</ObjectId>
+      <IntrospectionTimestamp>2017-01-06.01:02:01</IntrospectionTimestamp>
+      <CreatedTimestamp>2017-01-05.00:10:00</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.01:00:44</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>29</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="FINANCES">
+      <ObjectId>52</ObjectId>
+      <IntrospectionTimestamp>2017-01-06.14:45:10</IntrospectionTimestamp>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="21" parent="1" name="LOGISTIC">
+      <ObjectId>53</ObjectId>
+      <IntrospectionTimestamp>2017-01-06.14:45:10</IntrospectionTimestamp>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="22" parent="1" name="WAREHOUSE">
+      <ObjectId>54</ObjectId>
+      <IntrospectionTimestamp>2017-01-06.14:45:10</IntrospectionTimestamp>
+      <Visible>1</Visible>
+    </schema>
+    <table id="23" parent="2" name="ORDERS">
+      <ObjectId>20074</ObjectId>
+      <CreatedTimestamp>2017-01-05.00:10:00</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-05.00:10:00</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="2" name="USERS">
+      <ObjectId>20076</ObjectId>
+      <CreatedTimestamp>2017-01-05.00:10:00</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-05.00:10:00</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="2" name="USERSPRODUCTS">
+      <ObjectId>20211</ObjectId>
+      <CreatedTimestamp>2017-01-06.01:00:44</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.01:00:44</ModifiedTimestamp>
+    </table>
+    <column id="26" parent="23" name="ORDERID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="23" name="STATE">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="23" name="SHIPPINGMETHOD">
+      <Position>3</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="23" name="PAYMENTMETHOD">
+      <Position>4</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="23" name="EMAIL">
+      <Position>5</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="23" name="NAME">
+      <Position>6</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="23" name="LASTNAME">
+      <Position>7</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="23" name="STREET">
+      <Position>8</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="23" name="HOUSENUMBER">
+      <Position>9</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="23" name="FLATNUMBER">
+      <Position>10</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="23" name="CITY">
+      <Position>11</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="23" name="POSTALCODE">
+      <Position>12</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="23" name="PHONENUMBER">
+      <Position>13</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="23" name="ORDER_PK">
+      <ObjectId>20075</ObjectId>
+      <CreatedTimestamp>2017-01-05.00:10:00</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-05.00:10:00</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_01</TablespaceName>
+      <ColNames>ORDERID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="23" name="ORDER_PK">
+      <ModifiedTimestamp>2017-01-05.00:10:00</ModifiedTimestamp>
+      <ColNames>ORDERID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ORDER_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="24" name="USERID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="24" name="EMAIL">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="24" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="24" name="NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="24" name="LASTNAME">
+      <Position>5</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="24" name="STREET">
+      <Position>6</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="24" name="HOUSENUMBER">
+      <Position>7</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="24" name="FLATNUMBER">
+      <Position>8</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="24" name="CITY">
+      <Position>9</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="24" name="POSTALCODE">
+      <Position>10</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="24" name="PHONENUMBER">
+      <Position>11</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="52" parent="24" name="USER_PK">
+      <ObjectId>20077</ObjectId>
+      <CreatedTimestamp>2017-01-05.00:10:00</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-05.00:10:00</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_01</TablespaceName>
+      <ColNames>USERID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="24" name="USER_PK">
+      <ModifiedTimestamp>2017-01-05.00:10:00</ModifiedTimestamp>
+      <ColNames>USERID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>USER_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="25" name="USERID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="25" name="PRODUCTID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="56" parent="25" name="USER_PRODUCT_FK">
+      <ModifiedTimestamp>2017-01-06.01:00:44</ModifiedTimestamp>
+      <ColNames>USERID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>USERS</RefTableName>
+      <RefKeyName>USER_PK</RefKeyName>
+    </foreign-key>
+  </database-model>
+</dataSource>

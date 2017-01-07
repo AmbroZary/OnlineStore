@@ -1,14 +1,13 @@
 package logistic.infrastructure.Repositories.TestRepositories;
 
 import client.domain.Aggregates.OrderAggregate.Order;
-import client.domain.Aggregates.OrderAggregate.OrderStates.ProvidedOrderState;
-import client.domain.Aggregates.OrderAggregate.OrderStates.SentOrderState;
+import client.domain.Aggregates.OrderAggregate.OrderState;
 import logistic.domain.Services.ClientOrderRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 
-@Component
+// @Component
 public class ClientOrderTestRepository implements ClientOrderRepository{
     private LinkedList<Order> list;
 
@@ -26,11 +25,11 @@ public class ClientOrderTestRepository implements ClientOrderRepository{
 
     @Override
     public void changeStateToSent(int id) {
-        getOrder(id).setState(new SentOrderState());
+        getOrder(id).setState(OrderState.Sent);
     }
 
     @Override
     public void changeStateToProvided(int id) {
-        getOrder(id).setState(new ProvidedOrderState());
+        getOrder(id).setState(OrderState.Provided);
     }
 }

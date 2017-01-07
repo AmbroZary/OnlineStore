@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="warehouse.domain.ProductAggregate">
+    <class name="Model" table="Model">
+        <id name="id" type="int">
+            <column name="modelid" precision="10" scale="0" not-null="true" />
+            <generator class="increment" />
+        </id>
+        <property name="price"/>
+        <property name="name" type="java.lang.String">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="image" type="binary">
+            <column name="IMAGE" not-null="true" />
+        </property>
+        <many-to-one name="category" class="warehouse.domain.ProductAggregate.Category" foreign-key="model_category_fk"
+                     fetch="join">
+            <column name="categoryid" not-null="true"/>
+        </many-to-one>
+        <set name="additionalModelInfo" cascade="all" table="ADDITIONALMODELINFO">
+            <key column="modelid"/>
+            <composite-element class="AdditionalModelInfo">
+                <property name="attribute"/>
+                <property name="value"/>
+            </composite-element>
+        </set>
+    </class>
+</hibernate-mapping>

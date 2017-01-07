@@ -1,14 +1,17 @@
 package client.app.Services;
 
-import client.domain.Aggregates.ProductAggregate.Product;
-import client.domain.Aggregates.ProductAggregate.Repository.ProductRepository;
+
+import warehouse.domain.ProductAggregate.Model;
+import warehouse.domain.ProductAggregate.Product;
+import warehouse.domain.ProductAggregate.Repository.ProductRepository;
 import client.domain.Aggregates.UserAggregate.Repository.UserRepository;
 import client.domain.Aggregates.UserAggregate.User;
-import client.domain.Aggregates.ProductAggregate.Model;
-import client.domain.Aggregates.ProductAggregate.Size;
+
+
 import client.app.Services.Interfaces.CartManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import warehouse.domain.ProductAggregate.Size;
 
 import java.util.LinkedList;
 import java.util.List;

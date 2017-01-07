@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="warehouse">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="WAREHOUSE">
+      <ObjectId>54</ObjectId>
+      <IntrospectionTimestamp>2017-01-06.14:35:15</IntrospectionTimestamp>
+      <CreatedTimestamp>2017-01-06.14:34:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:30</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>29</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="CLIENT">
+      <ObjectId>50</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="FINANCES">
+      <ObjectId>52</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="LOGISTIC">
+      <ObjectId>53</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="23" parent="2" name="ADDITIONALCATEGORYATTRIBUTE">
+      <ObjectId>20248</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:25</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:25</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="2" name="ADDITIONALMODELINFO">
+      <ObjectId>20246</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:23</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:23</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="2" name="CATEGORY">
+      <ObjectId>20240</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:16</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="2" name="MODEL">
+      <ObjectId>20242</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:20</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:20</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="2" name="ORDEREDPRODUCT">
+      <ObjectId>20252</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:30</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:30</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="2" name="PRODUCT">
+      <ObjectId>20250</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:27</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:27</ModifiedTimestamp>
+    </table>
+    <column id="29" parent="23" name="ADDITIONALCATEGORYATTRIBUTEID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="23" name="CATEGORYID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="23" name="NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="32" parent="23" name="ADDITIONALCATEGORYATTRIBUTE_PK">
+      <ObjectId>20249</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:25</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:25</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_04</TablespaceName>
+      <ColNames>ADDITIONALCATEGORYATTRIBUTEID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="23" name="ADDITIONALCATEGORYATTRIBUTE_PK">
+      <ModifiedTimestamp>2017-01-06.14:34:25</ModifiedTimestamp>
+      <ColNames>ADDITIONALCATEGORYATTRIBUTEID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ADDITIONALCATEGORYATTRIBUTE_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="23" name="INFO_CATEGORYL_FK">
+      <ModifiedTimestamp>2017-01-06.14:34:25</ModifiedTimestamp>
+      <ColNames>CATEGORYID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CATEGORY</RefTableName>
+      <RefKeyName>CATEGORY_PK</RefKeyName>
+    </foreign-key>
+    <column id="35" parent="24" name="ADDITIONALMODELINFOID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="24" name="MODELID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="24" name="KEY">
+      <Position>3</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="24" name="VALUE">
+      <Position>4</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="24" name="ADDITIONALMODELINFO_PK">
+      <ObjectId>20247</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:23</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:23</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_04</TablespaceName>
+      <ColNames>ADDITIONALMODELINFOID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="24" name="ADDITIONALMODELINFO_PK">
+      <ModifiedTimestamp>2017-01-06.14:34:23</ModifiedTimestamp>
+      <ColNames>ADDITIONALMODELINFOID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ADDITIONALMODELINFO_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="24" name="INFO_MODEL_FK">
+      <ModifiedTimestamp>2017-01-06.14:34:23</ModifiedTimestamp>
+      <ColNames>MODELID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>MODEL</RefTableName>
+      <RefKeyName>MODEL_PK</RefKeyName>
+    </foreign-key>
+    <column id="42" parent="25" name="CATEGORYID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="25" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="44" parent="25" name="CATEGORY_PK">
+      <ObjectId>20241</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:16</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_04</TablespaceName>
+      <ColNames>CATEGORYID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="25" name="CATEGORY_PK">
+      <ModifiedTimestamp>2017-01-06.14:34:16</ModifiedTimestamp>
+      <ColNames>CATEGORYID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>CATEGORY_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="26" name="MODELID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="26" name="CATEGORYID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="26" name="PRICE">
+      <Position>3</Position>
+      <DataType>NUMBER(*,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="26" name="NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="26" name="IMAGE">
+      <Position>5</Position>
+      <DataType>BLOB|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="51" parent="26" name="MODEL_PK">
+      <ObjectId>20245</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:20</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:20</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_04</TablespaceName>
+      <ColNames>MODELID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="26" name="MODEL_PK">
+      <ModifiedTimestamp>2017-01-06.14:34:20</ModifiedTimestamp>
+      <ColNames>MODELID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>MODEL_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="53" parent="26" name="CATEGORY_MODEL_FK">
+      <ModifiedTimestamp>2017-01-06.14:34:20</ModifiedTimestamp>
+      <ColNames>CATEGORYID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CATEGORY</RefTableName>
+      <RefKeyName>CATEGORY_PK</RefKeyName>
+    </foreign-key>
+    <column id="54" parent="27" name="PRODUCTID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="27" name="MODELID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="27" name="ORDERID">
+      <Position>3</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="27" name="PRODUCTSIZE">
+      <Position>4</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="58" parent="27" name="ORDEREDPRODUCT_PK">
+      <ObjectId>20253</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:30</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:30</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_04</TablespaceName>
+      <ColNames>PRODUCTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="59" parent="27" name="ORDEREDPRODUCT_PK">
+      <ModifiedTimestamp>2017-01-06.14:34:30</ModifiedTimestamp>
+      <ColNames>PRODUCTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ORDEREDPRODUCT_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="60" parent="27" name="ORDEREDPRODUCT_MODEL_FK">
+      <ModifiedTimestamp>2017-01-06.14:34:30</ModifiedTimestamp>
+      <ColNames>MODELID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>MODEL</RefTableName>
+      <RefKeyName>MODEL_PK</RefKeyName>
+    </foreign-key>
+    <column id="61" parent="28" name="PRODUCTID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="28" name="MODELID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="28" name="PRODUCTSIZE">
+      <Position>3</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="64" parent="28" name="PRODUCT_PK">
+      <ObjectId>20251</ObjectId>
+      <CreatedTimestamp>2017-01-06.14:34:27</CreatedTimestamp>
+      <ModifiedTimestamp>2017-01-06.14:34:27</ModifiedTimestamp>
+      <TablespaceName>TBS_PERM_04</TablespaceName>
+      <ColNames>PRODUCTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="28" name="PRODUCT_PK">
+      <ModifiedTimestamp>2017-01-06.14:34:27</ModifiedTimestamp>
+      <ColNames>PRODUCTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PRODUCT_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="28" name="PRODUCT_MODEL_FK">
+      <ModifiedTimestamp>2017-01-06.14:34:27</ModifiedTimestamp>
+      <ColNames>MODELID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>MODEL</RefTableName>
+      <RefKeyName>MODEL_PK</RefKeyName>
+    </foreign-key>
+  </database-model>
+</dataSource>

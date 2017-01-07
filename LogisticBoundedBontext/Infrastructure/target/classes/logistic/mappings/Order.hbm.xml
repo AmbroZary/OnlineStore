@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="logistic.domain.OrderAggregate.Order" table="Orders">
+        <id name="id" type="int">
+            <column name="orderId" precision="10" scale="0" not-null="true" />
+            <generator class="sequence" />
+        </id>
+        <property name="provided"/>
+        <component name="address" class="logistic.domain.OrderAggregate.Address"> <!-- class attribute optional -->
+            <property name="name"/>
+            <property name="lastName"/>
+            <property name="street"/>
+            <property name="houseNumber"/>
+            <property name="flatNumber"/>
+            <property name="city"/>
+            <property name="postalCode"/>
+            <property name="phoneNumber"/>
+        </component>
+    </class>
+</hibernate-mapping>

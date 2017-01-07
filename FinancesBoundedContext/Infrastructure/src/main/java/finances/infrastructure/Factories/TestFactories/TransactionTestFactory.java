@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
+// @Component
 public class TransactionTestFactory extends TransactionFactory {
 
     private TransactionRepository transactionRepository;

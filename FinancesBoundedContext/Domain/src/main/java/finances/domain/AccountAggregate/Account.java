@@ -1,11 +1,18 @@
 package finances.domain.AccountAggregate;
 
 
-public class Account{
+import common.Interfaces.Entity;
+
+public class Account extends Entity{
 
     private double balance;
 
     public Account() {
+        this.balance = 0;
+    }
+
+    public Account(int id) {
+        super(id);
         this.balance = 0;
     }
 

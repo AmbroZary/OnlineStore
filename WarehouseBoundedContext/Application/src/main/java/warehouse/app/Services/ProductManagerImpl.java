@@ -1,8 +1,9 @@
 package warehouse.app.Services;
 
 
-import client.domain.Aggregates.ProductAggregate.*;
-import client.domain.Aggregates.ProductAggregate.Repository.ProductRepository;
+import warehouse.domain.ProductAggregate.*;
+import warehouse.domain.ProductAggregate.Repository.MissingProductException;
+import warehouse.domain.ProductAggregate.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import warehouse.app.Services.Interfaces.ProductManager;
@@ -43,12 +44,17 @@ public class ProductManagerImpl implements ProductManager {
     }
 
     @Override
-    public Product AddProduct(double price, Category category, AdditionalInfo additionalInfo, Size size) {
-        return productFactory.createProduct(price, category, additionalInfo , size);
+    public Product AddProduct(Model model, Size size) {
+        return productFactory.createProduct(model, size);
     }
 
     @Override
     public Product findByModelAndSize(Model model, Size size) {
         return productRepository.findByModelAndSize(model,size);
+    }
+
+    @Override
+    public void orderProducts(int orderId, List<Product> products) throws MissingProductException{
+        productRepository.orderProducts(orderId, products);
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="warehouse.domain.ProductAggregate.Product" table="PRODUCT" entity-name="Product">
+        <id name="id" type="int">
+            <column name="productid" precision="10" scale="0" not-null="true"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one name="model" class="warehouse.domain.ProductAggregate.Model" foreign-key="product_model_fk" property-ref="id" fetch="join">
+            <column name="MODELID" not-null="true"/>
+        </many-to-one>
+        <property name="size">
+            <column name="productsize" sql-type="number" precision="10" scale="0" not-null="true"/>
+            <type name="common.HibernateNumericEnum">
+                <param name="enumClass">warehouse.domain.ProductAggregate.Size</param>
+            </type>
+        </property>
+    </class>
+    <class name="warehouse.domain.ProductAggregate.Product" table="ORDEREDPRODUCT" entity-name="OrderedProduct">
+        <id name="id" type="int">
+            <column name="productid" precision="10" scale="0" not-null="true"/>
+            <generator class="sequence"/>
+        </id>
+        <many-to-one name="model" class="warehouse.domain.ProductAggregate.Model" foreign-key="product_model_fk" fetch="join">
+            <column name="MODELID"  not-null="true"/>
+        </many-to-one>
+        <property name="size">
+            <column name="productsize" sql-type="number" precision="10" scale="0" not-null="true"/>
+            <type name="common.HibernateNumericEnum">
+                <param name="enumClass">warehouse.domain.ProductAggregate.Size</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

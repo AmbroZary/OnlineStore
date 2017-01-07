@@ -10,13 +10,13 @@ import client.domain.Aggregates.UserAggregate.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-public class UserTestFactory implements UserFactory{
+// @Component
+public class UserTestFactory extends UserFactory{
 
     private int idCounter;
     private UserRepository userRepository;
 
-    @Autowired
+    // @Autowired
     public UserTestFactory(UserRepository userRepository) {
         this.idCounter = 0;
         this.userRepository = userRepository;
@@ -28,10 +28,15 @@ public class UserTestFactory implements UserFactory{
     }
 
     @Override
-    public User CreateUser(String password, String email, String name, String lastName, String street, String houseNumber, String flatNumber,
-                           String city, String postalCode, String phoneNumber) {
-        User user = new User(idCounter++, new Cart(), password, new ClientAddress(name,lastName,street,houseNumber,flatNumber,city,
-                postalCode,phoneNumber, email));
+    protected User CreateUser(Cart cart, String password, ClientAddress address) {
+        User user = new User(this.idCounter++,cart,password,address);
+        userRepository.insert(user);
+        return user;
+    }
+
+    @Override
+    protected User CreateUser(String password, ClientAddress address) {
+        User user = new User(this.idCounter++,password,address);
         userRepository.insert(user);
         return user;
     }

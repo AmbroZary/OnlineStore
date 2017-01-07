@@ -1,13 +1,12 @@
 package warehouse.infrastructure.Factories.TestFactories;
 
-import client.domain.Aggregates.ProductAggregate.AdditionalInfo;
-import client.domain.Aggregates.ProductAggregate.Category;
-import client.domain.Aggregates.ProductAggregate.Product;
-import client.domain.Aggregates.ProductAggregate.Repository.ProductRepository;
-import client.domain.Aggregates.ProductAggregate.Size;
+import warehouse.domain.ProductAggregate.*;
+import warehouse.domain.ProductAggregate.Repository.ProductRepository;
 import warehouse.domain.ProductAggregate.Factory.ModelFactory;
 import warehouse.domain.ProductAggregate.Factory.ProductFactory;
 import warehouse.domain.ProductAggregate.Repository.ModelRepository;
+
+import java.util.List;
 
 
 public class ProductTestFactory implements ProductFactory {
@@ -35,8 +34,8 @@ public class ProductTestFactory implements ProductFactory {
     }
 
     @Override
-    public Product createProduct(double price, Category category, AdditionalInfo additionalInfo, Size size) {
-        Product product = new Product(idCounter++, modelFactory.createModel(price,category,additionalInfo), size);
+    public Product createProduct(Model model, Size size) {
+        Product product = new Product(idCounter++,model, size);
         productRepository.insert(product);
         return product;
     }

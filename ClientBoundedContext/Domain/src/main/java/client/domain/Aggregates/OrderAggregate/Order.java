@@ -1,15 +1,16 @@
 package client.domain.Aggregates.OrderAggregate;
 
-import client.domain.Aggregates.ProductAggregate.Product;
+
 import client.domain.Aggregates.UserAggregate.Client;
-import client.domain.Aggregates.OrderAggregate.OrderStates.OrderState;
 import common.Interfaces.Entity;
+import warehouse.domain.ProductAggregate.Product;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Order extends Entity {
 
-    private ArrayList<Product> products;
+    private Set<Product> products;
     private OrderAddress address;
     private Client owner;
     private OrderState state;
@@ -19,7 +20,7 @@ public class Order extends Entity {
     public Order() {
     }
 
-    public Order(int id, ArrayList<Product> products, OrderAddress address, Client owner, OrderState state,
+    public Order(int id, Set<Product> products, OrderAddress address, Client owner, OrderState state,
                  ShippingMethod shippingMethod, PaymentMethod paymentMethod) {
         super(id);
         this.products = products;
@@ -30,35 +31,21 @@ public class Order extends Entity {
         this.paymentMethod = paymentMethod;
     }
 
-    //Probably to remove
-//    public Order(int id, ArrayList<Product> products, Client owner,
-//                 String name, String lastName, String street, String houseNumber, String flatNumber, String city, String postalCode, String phoneNumber) {
-//        this.id = id;
-//        this.products = products;
-//        this.address = new OrderAddress(name, lastName, street, houseNumber, flatNumber, city, postalCode, phoneNumber);
-//        this.owner = owner;
-//    }
-//
-//    public Order(int id, OrderAddress address, Client owner) {
-//        this.id = id;
-//        this.products = new ArrayList<>();
-//        this.address = address;
-//        this.owner = owner;
-//    }
-//
-//    public Order(int id, Client owner,
-//                 String name, String lastName, String street, String houseNumber, String flatNumber, String city, String postalCode, String phoneNumber) {
-//        this.id = id;
-//        this.products = new ArrayList<>();
-//        this.address = new OrderAddress(name, lastName, street, houseNumber, flatNumber, city, postalCode, phoneNumber);
-//        this.owner = owner;
-//    }
+    public Order(Set<Product> products, OrderAddress address, Client owner, OrderState state,
+                 ShippingMethod shippingMethod, PaymentMethod paymentMethod) {
+        this.products = products;
+        this.address = address;
+        this.owner = owner;
+        this.state = state;
+        this.shippingMethod = shippingMethod;
+        this.paymentMethod = paymentMethod;
+    }
 
-    public ArrayList<Product> getProducts() {
+    public Set<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(ArrayList<Product> products) {
+    public void setProducts(Set<Product> products) {
         this.products = products;
     }
 

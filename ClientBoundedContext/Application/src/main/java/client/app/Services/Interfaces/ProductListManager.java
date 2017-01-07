@@ -1,6 +1,8 @@
 package client.app.Services.Interfaces;
 
-import client.domain.Aggregates.ProductAggregate.Product;
+
+
+import warehouse.domain.ProductAggregate.Product;
 
 import java.util.List;
 

@@ -10,6 +10,24 @@ public class User extends Client {
         this.address = address;
     }
 
+    public User(int id, String password, ClientAddress address) {
+        super(id);
+        this.password = password;
+        this.address = address;
+    }
+
+    public User(Cart cart, String password, ClientAddress address) {
+        super(cart);
+        this.password = password;
+        this.address = address;
+    }
+
+    public User(String password, ClientAddress address) {
+        super();
+        this.password = password;
+        this.address = address;
+    }
+
     public User() {
     }
 

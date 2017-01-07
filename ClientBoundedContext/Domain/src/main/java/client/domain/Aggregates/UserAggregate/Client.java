@@ -11,7 +11,17 @@ public class Client extends Entity {
         this.cart = cart;
     }
 
+    public Client(int id) {
+        super(id);
+        this.cart = new Cart();
+    }
+
+    public Client(Cart cart) {
+        this.cart = cart;
+    }
+
     public Client() {
+        this.cart = new Cart();
     }
 
     public Cart getCart() {

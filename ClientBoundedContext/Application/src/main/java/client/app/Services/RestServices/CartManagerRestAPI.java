@@ -1,7 +1,6 @@
 package client.app.Services.RestServices;
 
-import client.domain.Aggregates.ProductAggregate.Model;
-import client.domain.Aggregates.ProductAggregate.Size;
+
 import client.domain.Aggregates.UserAggregate.User;
 import client.app.Services.CartManagerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import warehouse.domain.ProductAggregate.Model;
+import warehouse.domain.ProductAggregate.Size;
 
 @RestController
 public class CartManagerRestAPI {

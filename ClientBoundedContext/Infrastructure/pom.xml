@@ -8,10 +8,19 @@
     <artifactId>client-bounded-context-infrastructure</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- JBoss repository for Hibernate -->
+    <repositories>
+        <repository>
+            <id>JBoss repository</id>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -28,6 +37,25 @@
             <artifactId>gson</artifactId>
             <version>2.8.0</version>
         </dependency>
+        <!-- ORACLE JDBC driver, need install yourself -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.6.3.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.12.1.GA</version>
+        </dependency>
+
         <dependency>
             <groupId>client-bounded-context-domain</groupId>
             <artifactId>client-bounded-context-domain</artifactId>

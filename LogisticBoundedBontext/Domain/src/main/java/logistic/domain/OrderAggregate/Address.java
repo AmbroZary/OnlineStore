@@ -9,6 +9,7 @@ public class Address {
     private String flatNumber;
     private String city;
     private String phoneNumber;
+    private String postalCode;
 
     public Address(String name, String lastName, String street, String houseNumber, String flatNumber, String city, String postalCode, String phoneNumber) {
         this.name = name;
@@ -84,6 +85,4 @@ public class Address {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
-    private String postalCode;
 }

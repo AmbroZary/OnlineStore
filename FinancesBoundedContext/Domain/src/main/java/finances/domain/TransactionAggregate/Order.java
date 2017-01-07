@@ -11,6 +11,13 @@ public class Order extends Entity {
         this.price = price;
     }
 
+    public Order(double price) {
+        this.price = price;
+    }
+
+    public Order() {
+    }
+
     public double getPrice() {
         return price;
     }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 
-@Component
+// @Component
 public class AccountTestRepository extends AccountRepository {
     private LinkedList<Account> list;
 

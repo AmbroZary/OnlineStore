@@ -1,11 +1,17 @@
 package client.infrastructure.Repositories.TestRepositories;
 
 import common.Repositories.CommonTestRepository;
-import client.domain.Aggregates.ProductAggregate.Model;
-import client.domain.Aggregates.ProductAggregate.Product;
-import client.domain.Aggregates.ProductAggregate.Repository.ProductRepository;
-import client.domain.Aggregates.ProductAggregate.Size;
+
+
+import warehouse.domain.ProductAggregate.Model;
+import warehouse.domain.ProductAggregate.Product;
+import warehouse.domain.ProductAggregate.Repository.MissingProductException;
+import warehouse.domain.ProductAggregate.Repository.ProductRepository;
 import org.springframework.stereotype.Component;
+import warehouse.domain.ProductAggregate.Size;
+
+import java.util.LinkedList;
+import java.util.List;
 
 @Component
 public class ProductTestRepository extends CommonTestRepository<Product> implements ProductRepository{
@@ -15,5 +21,23 @@ public class ProductTestRepository extends CommonTestRepository<Product> impleme
                 .filter((Product p) -> p.getModel() == model)
                 .filter((Product p)-> p.getSize() == size)
                 .findFirst().orElse(null);
+    }
+
+    @Override
+    public void orderProducts(int OrderId, List<Product> products) throws MissingProductException {
+        List<Product> missings = new LinkedList<>();
+        for (Product ordered:products) {
+            if(list.stream().filter((Product p) -> p == ordered).findFirst().orElse(null) == null){
+                missings.add(ordered);
+            }
+        }
+        if (!missings.isEmpty()){
+            throw new MissingProductException(missings);
+        }
+    }
+
+    @Override
+    public List<Product> findForOrder(int OrderId) {
+        return list;
     }
 }

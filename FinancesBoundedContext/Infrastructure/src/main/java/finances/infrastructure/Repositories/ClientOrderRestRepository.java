@@ -1,8 +1,6 @@
 package finances.infrastructure.Repositories;
 
 import client.domain.Aggregates.OrderAggregate.Order;
-import client.domain.Aggregates.OrderAggregate.OrderStates.PaidOrderState;
-import client.domain.Aggregates.ProductAggregate.Product;
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
